@@ -1,0 +1,128 @@
+:root {--modal-shadow-color: rgba(77, 97, 84, 0.808);}
+
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+/* --- Fondos con Gradiente --- */
+.bg-aurora-neon {
+    background-color: #111827; /* Base color (gray-900) */
+    background-image: 
+        radial-gradient(at 20% 15%, hsla(262, 74%, 34%, 0.4) 0px, transparent 50%),
+        radial-gradient(at 80% 20%, hsla(190, 78%, 53%, 0.3) 0px, transparent 50%);
+}
+
+.bg-atardecer-cosmico {
+    background-color: #111827; /* Base color (gray-900) */
+    background-image: linear-gradient(135deg, 
+        rgba(190, 24, 93, 0.25) 0%, 
+        rgba(249, 115, 22, 0.15) 50%, 
+        transparent 70%);
+}
+
+.bg-menta-digital {
+    background-color: #111827; /* Base color (gray-900) */
+    background-image: radial-gradient(ellipse 80% 80% at 50% -20%,
+        rgba(16, 185, 129, 0.3), 
+        rgba(255, 255, 255, 0));
+}
+
+.table-container {
+    overflow-x: scroll;
+}
+
+/* Custom scrollbar for better aesthetics */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #1a202c; /* gray-900 */
+}
+
+::-webkit-scrollbar-thumb {
+    background: #4a5568; /* gray-600 */
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #718096; /* gray-500 */
+}
+
+.analysis-cell {
+    max-width: 350px;
+    min-width: 300px;
+}
+
+.example-cell {
+    min-width: 320px;
+    padding: 1rem !important;
+}
+
+.chart-container {
+    width: 300px;
+    height: 200px;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+.chart-container:hover {
+    transform: scale(1.05);
+}
+
+.modal {
+    transition: opacity 0.25s ease;
+    z-index: 1000;
+}
+
+.modal-backdrop {
+    background-color: rgba(17, 24, 39, 0);
+}
+
+/* *** CLASE PARA GLASSMORPHISM *** */
+.glassmorphic-card {
+  /* Fondo semitransparente para ver a través */
+  background-color: rgba(31, 41, 55, 0.2); /* gray-800 con 60% de opacidad */
+  
+  /* El efecto de desenfoque del fondo */
+  backdrop-filter: blur(30px);
+  -webkit-backdrop-filter: blur(30px); /* Para compatibilidad con Safari */
+
+  /* Un borde sutil para definir los límites del cristal */
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 8px var(--modal-shadow-color);
+  /* Transición suave */
+  transition: all 0.2s ease;
+}
+.glassmorphic-card:hover {
+    box-shadow: 0 0 12px var(--modal-shadow-color);
+}
+
+
+/* Dygraphs legend styling */
+.dygraph-legend {
+    background-color: rgba(31, 41, 55, 0.75) !important;
+    padding: 5px;
+    border-radius: 5px;
+    color: white !important;
+    font-size: 12px !important;
+    border: 1px solid #4a5568;
+}
+
+/* Leaflet popup customization */
+.leaflet-popup-content-wrapper {
+    background-color: #2d3748; /* gray-800 */
+    color: #e5e7eb; /* gray-200 */
+    border-radius: 8px;
+}
+.leaflet-popup-tip {
+    background-color: #2d3748;
+}
+.leaflet-container {
+    /* para evitar que leaflet deje un fondo blanco para las demás gráficas */
+    background-color: transparent;
+}
+
+
+
